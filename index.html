@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>.</title>
+    <style>
+        * {
+            margin: 0; 
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('azovskayastate1.png'); 
+            background-size: cover;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+        }
+
+
+        h1, h2, h3 {
+    color: white; /* White color for headers */
+}
+
+p {
+    color: white; /* White color for paragraphs */
+}
+
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center; /* Center sections */
+        }
+
+        section {
+            padding: 15px;
+            
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(256,256,256.0.1);
+            width: 100%; /* Full width of the parent container */
+            max-width: 400px; /* Reduced max-width to 50% of the previous size (from 800px to 400px) */
+            margin: 0 auto; /* Center sections horizontally */
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .description {
+            margin-top: 10px;
+            padding: 10px;
+            border-top: 1px solid #ccc;
+        }
+
+        /* Expandable Section at Bottom Left */
+        #expandableSection {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: #007BFF;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: all 0.3s;
+            max-width: 250px;
+            width: 100%;
+        }
+
+        #expandableSection.open {
+            width: 300px; /* Expands when opened */
+        }
+
+        #expandableSection .content {
+            display: none;
+            margin-top: 10px;
+        }
+
+        #expandableSection.open .content {
+            display: block;
+        }
+        /* Expandable Section Styling */
+section {
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Image and Description Styling */
+.section-image {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    margin-bottom: 10px;
+}
+
+.description {
+    margin-top: 10px;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+}
+
+
+      
+
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Azovskaya.ru.net.portal.420.tj.</h1>
+    </header>
+    <main>
+       
+
+        <section id="place2">
+            <h2>The geolocation</h2>
+            <button onclick="toggleDescription('desc2')">Learn More</button>
+            <div id="desc2" class="description" style="display: none;">
+                <p>Azovskaya has a great location since it  will take around 10-60 minutes to travel across the whole city and is overall located in a place where there are  many shops near home making it more convenient if you aint 
+                    a fan of transport.<!--  --></p>
+            </div>
+        </section>
+
+    
+        <section id="Cultland">
+            <h2>The cultural landscape</h2>
+            <button onclick="toggleDescription('desc5', '')">Learn More</button>
+            <div id="desc5" onclick="toggleExpandable2()">
+                <h3>The cultural landscape<h3>
+                <div class="content">
+                    <p> Cultural landscape on Azovskaya has been severely impacted by the influx of emigrants from afghanistan, India, Pakistan and other incredibly poor countries seeking for better life opportunities. This caused a whole lot of different cultures
+                        to combine in one place. For example in "Sevastopol" lots of foreign goods are selling for years including hookah, wiggly substances and overpriced fake clothing :). Such amounts of people coming
+                        to Azovskaya got it pretty industrialised in the past 2 decades (The huge house is a prime example of that and it was built in around early-mid 2000's). Finally I would like to add that lots of emigrants also began to work at various
+                        supermarkets and kiosks all over the street.
+                        
+                    </p>
+        </section>
+           
+        <section id="Economic opportunities">
+            <h2>Economic opportunities</h2>
+            <button onclick="toggleDescription('desc6')">Learn More</button>
+            <div id="desc6" class="description" style="display: none;">
+                <p>The economic opportunities on Azovskaya are generally pretty good because its around 15 minutes from the center of Moscow (if on metro) and thus it opens all sort of studying and career opportunities.
+                    Overall the economic opportunities on Azovskaya are pretty much the same as in the whole moscow since the living price is moderate (for moscow atleast) and its generally possible to get good education or 
+                    find a proper job.
+                </p>
+            </div>
+        </section>
+
+    <section id="Social factors">
+        <h2>How is social life on Azovskaya?</h2>
+        <button onclick="toggleDescription('newDesc2')">Learn More</button>
+        <div id="newDesc2" class="description" style="display: none;">
+            <p>Socialisation is probably one of the most important factors when moving or living in a specific place. If you have any people or friends to meet in moscow then it will not be an issue since since the street has 2 metro stations 
+             and thus it wont be hard to meet that person even if they are on the other part of the city. Meeting new people on Azovskaya itself wouldnt be that hard because you will likely have frequent encounters with your neighbours
+              and will likely get to know them relatively quickly, most children will also find it pretty easy to find friends because the whole street has a ton of playgrounds with kids frequently visiting them. Personally
+              I want to add that I met some of my closest friends on Azovskaya and im especially thankfull to Леня for providing most pictures for this website and overall being a great friends.
+            </p>
+        </div>
+    </section>
+            <!-- Added Sections -->
+    <section id="Place's affect on its inhavitats">
+        <h2>Affect on life</h2>
+        <button onclick="toggleDescription('desc69')">Learn More</button>
+        <div id="desc69" class="description" style="display: none;">
+            <p>Overall azovskaya doesnt have such a huge impact on the life of its inhabitats since it creates a layer of a quite and peaceful life with a good amount of opportunities and career choices. 
+            The location is also pretty good.
+            </p>
+        </div>
+    </section>
+
+    <section id="popdensity">
+        <h2>Population density/restribution</h2>
+        <button onclick="toggleDescription('desc420')">Learn More</button>
+        <div id="desc420" class="description" style="display: none;">
+            <p>The population density is basically managed amazingly on Azovskaya and in my 7 years of life there i cannot think of even one moment the street felt crowded or overfilled. This is partially due 
+                to each appartament being respectab;y big and each flat having around 4-5 appartaments.(im talking about the home  i am from which is basically the biggest building on the whole street)
+            </p>
+        </div>
+    </section>
+
+    <section id="Sevastopol">
+        <h2>"Sevastopol"</h2>
+        <button onclick="toggleDescription('newDesc33')">Learn More</button>
+        <div id="newDesc33" class="description" style="display: none;">
+            <img src="hj.jpg" alt="Description Image" class="section-image">
+            <p>Sevastopol is a grey building from the 2000s and it is mostly occupied by foreigners who sell their goods there, also there are somteimes drug sales occuring there so i would conside it a relatively funny place.</p>
+        </div>
+    </section>
+
+    <section id="Mall">
+        <h2>Mall</h2>
+        <button onclick="toggleDescription('newDesc55')">Learn More</button>
+        <div id="newDesc55" class="description" style="display: none;">
+            <img src="ph7.jpg" alt="Description Image" class="section-image">
+            <img src="ph5.jpg" alt="Description Image" class="section-image">
+            <img src="ph12.jpg" alt="Description Image" class="section-image">
+            <p>The mall isnt too far away from us (like 5 mins) and it has all sorts of things in it ranging from a tech shop to a bowling center and a quest zone, also the place includes lots of supermarkets and home  appliances stuff.</p>
+        </div>
+    </section>
+    <section id="The building we grew up in">
+        <h2>New Section Title</h2>
+        <button onclick="toggleDescription('newDesc11')">Learn More</button>
+        <div id="newDesc11" class="description" style="display: none;">
+            <img src="ph4.jpg" alt="Description Image" class="section-image">
+            <img src="ph16.jpg" alt="Description Image" class="section-image">
+            <img src="ph14.jpg" alt="Description Image" class="section-image">
+
+            <p>The building I and many of ma friends grew up in is massive and it has hundreads of appartaments, the images provided in this section will display a view from the window of that building.</p>
+        </div>
+    </section>
+
+    <section id="FInale">
+        <h2>(not relevant) Basically some pics from that and close to it streets.</h2>
+        <button onclick="toggleDescription('newDesc')">Learn More</button>
+        <div id="newDesc" class="description" style="display: none;">
+            <img src="ph18.jpg" alt="Description Image" class="section-image">
+            <img src="ph19.jpg" alt="Description Image" class="section-image">
+            <img src="ph17.jpg" alt="Description Image" class="section-image">
+            <img src="ph10.jpg" alt="Description Image" class="section-image">
+            <p>Here pictur</p>
+        </div>
+    </section>
+    
+    
+    
+    
+    
+
+    </main>
+
+    <!-- Expandable Section (Bottom Left) -->
+    <div id="expandableSection" onclick="toggleExpandable()">
+        <h3>The biggest downsides</h3>
+        <div class="content">
+            <p>The biggest downside of the whole place is applicable to the whole moscow and its traffic, sometimes you can spend hours just staying in traffic if you want to leave the city which can play a huge factor in some people's lives.
+                Another "downside" isnt applicable to everyone but the whole street is just grey as hell, this could make the place more depressing for some ppl but personally I love it. The last downside i want to point out is 
+                that sometimes emigrants and locals get wiggly and can create Заварушки aka just criminal activities but it happens so rarely that you will probably will not even notice it.
+            </p>
+        </div>
+   
+
+   
+
+    <script src="script.js"></script> <!-- This links to your JavaScript file -->
+    
+    <script>
+        // Toggle description for each section
+        function toggleDescription(descriptionId, imageId) {
+            const descriptionElement = document.getElementById(descriptionId);
+            const imageElement = document.getElementById(imageId);
+
+            if (descriptionElement.style.display === 'none' || descriptionElement.style.display === '') {
+                descriptionElement.style.display = 'block'; // Show the description
+                if (imageElement) {
+                    imageElement.style.display = 'block'; // Show the image
+                }
+            } else {
+                descriptionElement.style.display = 'none'; // Hide the description
+                if (imageElement) {
+                    imageElement.style.display = 'none'; // Hide the image
+                }
+            }
+        }
+
+        // Toggle the expandable section at the bottom left
+        function toggleExpandable() {
+            const expandableSection = document.getElementById('expandableSection');
+            expandableSection.classList.toggle('open');
+        }
+    </script>
+
+</body>
+</html>
